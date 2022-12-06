@@ -1,6 +1,7 @@
 import { Network, Alchemy } from "alchemy-sdk";
 import Web3 from "web3";
 import { ethers } from "ethers";
+import env from './env.json' assert {type: "json"};
 
 import { proxyInterfaceABI, getTime, eventName } from "./utils.js";
 
@@ -22,7 +23,7 @@ const aggregators = await Promise.all(
 );
 
 const alchemySettings = {
-    apiKey: "YVH3w1RJcnRyMVTf9xRlcym34Dt6HJUr",
+    apiKey: env.ALCHEMY_API_KEY,
     network: Network.ETH_MAINNET,
 };
 

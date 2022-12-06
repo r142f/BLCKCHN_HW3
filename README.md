@@ -1,10 +1,19 @@
+## Перед запуском
+- [Получите Alchemy API key](https://docs.alchemy.com/docs/alchemy-quickstart-guide#1key-create-an-alchemy-key).
 ## Как запустить
 - Склонируйте репозиторий. 
+- Создайте файл [env.json](env.json) со следующим содержанием:
+
+      {
+        "ALCHEMY_API_KEY": "YOUR_KEY"
+      }
+      
+- Замените `YOUR_KEY` на полученный ранее API ключ Alchemy.
 - В репозитории проекта:
-```bash
-npm install   # установка необходимых модулей
-node index.js # запуск монитора
-```
+    ```bash
+    npm install   # установка необходимых модулей
+    node index.js # запуск монитора
+    ```
 ## Образец вывода логов
 ```bash
 [06.11.2022, 13:18:20,  ETH/USD] subscribed to AnswerUpdated(int256,uint256,uint256) event emitted by 0x37bC7498f4FF12C19678ee8fE19d713b87F6a9e6 aggregator
